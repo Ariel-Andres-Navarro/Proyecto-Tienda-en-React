@@ -1,16 +1,17 @@
-import './App.css'
-import { ItemListContainer } from './components/ItemListContainer/ItemListContainer'
-import { Navbar } from './components/NavBar/Navbar'
+import './App.css';
+import NavBar from './components/NavBar/NavBar';
+import ItemCount from './components/ItemCount/ItemCount'
+import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 
 function App() {
-  
-
   return (
-    <>
-    <Navbar/>
-    <ItemListContainer saludo="HOLA BIENVENIDOS" />
-    </>
-  )
+    <div>
+     <NavBar/>
+     <ItemListContainer saludo={'HOLA BIENVENIDOS'} />
+     <ItemCount initial={1} stock={10} onAdd={(quantity) => console.log('Cantidad agregada ',quantity)} />
+    </div>
+  );
 }
 
-export default App
+export default App;
+
