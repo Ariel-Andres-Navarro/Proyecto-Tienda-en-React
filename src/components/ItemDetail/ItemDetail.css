@@ -1,12 +1,26 @@
+.ItemContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(250px, 1fr));
+  gap: 16px;
+  padding: 16px;
+}
+
 .CardItem {
     border: 1px solid #ccc;
     padding: 16px;
-    margin: 16px;
     border-radius: 8px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
   }
+
+  .CardItem:hover {
+    transform: translate(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  } 
   
   .Header {
     margin-bottom: 16px;
