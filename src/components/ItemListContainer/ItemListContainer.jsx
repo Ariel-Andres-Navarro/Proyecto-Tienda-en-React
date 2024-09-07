@@ -13,7 +13,7 @@ const ItemListContainer = ({saludo}) => {
         useEffect(() => {
             const fetchProducts  = categoryId ? getProductsByCategory : getProducts;
             
-            fetchProducts(categoryId)
+            fetchProducts(categoryId) 
             .then(response => {
                 setProducts(response)
             })
