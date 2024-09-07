@@ -50,4 +50,43 @@ nav {
   }
   
  
-  
+  /* NavBar.css */
+
+.NavBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 10px 20px;
+  color: white;
+}
+
+.NavBar h3 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.NavBar .categories {
+  display: flex;
+  gap: 15px;
+}
+
+.NavBar .categories a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+}
+
+.NavBar .categories a.Option {
+  opacity: 0.8;
+  transition: opacity 0.3s;
+}
+
+.NavBar .categories a.ActiveOption {
+  font-weight: bold;
+  border-bottom: 2px solid white;
+}
+
+.NavBar .categories a:hover {
+  opacity: 1;
+}
