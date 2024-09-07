@@ -22,11 +22,11 @@ const ItemDetailContainer = () => {
 
     return(
         <div className='ItemDetailContainer'>
-             <ItemDetail {...product}/> 
+            {product && <ItemDetail {...product}/> }
         </div>
     )
 }
 
 export default ItemDetailContainer
 
-// {product & <ItemDetail {...product}/> }
+// en linea 25 agrege {product &&}
