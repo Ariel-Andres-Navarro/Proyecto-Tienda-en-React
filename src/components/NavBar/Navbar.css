@@ -1,57 +1,6 @@
-body {
-    margin: 0; /* Elimina el margen por defecto del body */
-    padding: 0; /* Elimina el padding por defecto del body */
-}
+/* NavBar.css */
 
-/* Estilos para la barra de navegación */
-nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem 2rem;
-    background-color: #f8f9fa; /* Color de fondo claro para la barra de navegación */
-    border-bottom: 1px solid #dee2e6; /* Borde en la parte inferior de la barra de navegación */
-  }
-  
-  nav h2 {
-    font-size: 1.5rem;
-    margin: 0;
-  }
-
-  nav h2:hover{
-    background-color: rgb(227, 174, 174);
-  }
-  
-  nav .container {
-    display: flex;
-    align-items: center;
-  }
-  
-  nav ul {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  nav ul li {
-    margin: 0 1rem; /* Espacio entre los elementos de la lista */
-  }
-  
-  nav ul li {
-    text-decoration: none;
-    color: #007bff; /* Color del texto del enlace */
-    font-size: 1rem;
-  }
-  
-  nav ul li:hover {
-    background-color: rgb(237, 193, 193);
-    
-  }
-  
- 
-  /* NavBar.css */
-
+/* Ensure the NavBar takes up the full width of the viewport */
 .NavBar {
   display: flex;
   justify-content: space-between;
@@ -59,6 +8,12 @@ nav {
   background-color: #333;
   padding: 10px 20px;
   color: white;
+  width: 100%; /* Makes sure it spans the entire width */
+  box-sizing: border-box; /* Ensures padding and border are included in the total width */
+  position: fixed; /* Optional: Keeps the NavBar fixed at the top */
+  top: 0; /* Ensures it stays at the top */
+  left: 0; /* Ensures it starts at the left edge */
+  z-index: 1000; /* Optional: Keeps it above other content */
 }
 
 .NavBar h3 {
@@ -90,3 +45,6 @@ nav {
 .NavBar .categories a:hover {
   opacity: 1;
 }
+
+
+
