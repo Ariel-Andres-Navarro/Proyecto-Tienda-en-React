@@ -3,74 +3,51 @@ body {
     padding: 0; /* Elimina el padding por defecto del body */
 }
 
-header {
-    background-color: white;
-    color: black;
-    padding: 1rem 2rem; /* Espaciado interno del header */
-    display: flex;
-    justify-content: space-evenly; /* Distribuye los elementos entre los extremos */
-    align-items: center; /* Alinea verticalmente los elementos */
-    width: 100%; /* Ocupa el ancho completo de la página */
-    box-sizing: border-box; /* Incluye el padding en el cálculo del ancho total */
-}
-
-.logo {
-    font-size: 3rem; /* Tamaño del ícono del oso */
+/* Estilos para la barra de navegación */
+nav {
     display: flex;
     align-items: center;
-    margin-right: 200px;
-}
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    background-color: #f8f9fa; /* Color de fondo claro para la barra de navegación */
+    border-bottom: 1px solid #dee2e6; /* Borde en la parte inferior de la barra de navegación */
+  }
+  
+  nav h2 {
+    font-size: 1.5rem;
+    margin: 0;
+  }
 
-.logo:hover {
-    background-color: #555;
-}
-
-nav {
-    flex: 1; /* Permite que el contenedor de los enlaces ocupe el espacio disponible entre el logo y el carrito */
+  nav h2:hover{
+    background-color: rgb(227, 174, 174);
+  }
+  
+  nav .container {
     display: flex;
-    justify-content: center; /* Centra los enlaces horizontalmente */
-}
-
-.link ul {
+    align-items: center;
+  }
+  
+  nav ul {
+    display: flex;
     list-style: none;
     margin: 0;
     padding: 0;
-    display: flex; /* Muestra los elementos de la lista en una fila */
-    gap: 1rem; /* Espacio entre los enlaces */
-}
-
-.link li {
-    padding: 0.5rem 1rem;
-    display: flex;
-    align-items: center; /* Alinea verticalmente el texto del enlace */
-    font-size: 30px;
-}
-
-.link li:hover {
-    background-color: #555; /* Color de fondo al pasar el mouse sobre el enlace */
-    border-radius: 4px; /* Bordes redondeados opcionales */
-}
-
-.cart-widget {
-    display: flex;
-    align-items: center; /* Alinea verticalmente el carrito y el contenido dentro de él */
-    font-size: 3rem;
-    margin-left: 200px;
-}
-
-.cart-widget:hover {
-    background-color: #555;
-}
-
-.cart-widget .cart-icon {
-    margin-right: 0.5rem; /* Espacio entre el ícono del carrito y el número */
-}
-
-.cart-widget span {
-    background-color: #ff0000; /* Color de fondo del número del carrito */
-    color: white; /* Color del texto del número del carrito */
-    border-radius: 50%; /* Forma circular para el número del carrito */
-    padding: 0.2rem 0.6rem; /* Espaciado interno del número */
-    font-size: 0.8rem; /* Tamaño del texto del número del carrito */
+  }
+  
+  nav ul li {
+    margin: 0 1rem; /* Espacio entre los elementos de la lista */
+  }
+  
+  nav ul li {
+    text-decoration: none;
+    color: #007bff; /* Color del texto del enlace */
+    font-size: 1rem;
+  }
+  
+  nav ul li:hover {
+    background-color: rgb(237, 193, 193);
     
-}
+  }
+  
+ 
+  

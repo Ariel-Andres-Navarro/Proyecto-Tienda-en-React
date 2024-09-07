@@ -1,20 +1,21 @@
-import { CartWidget } from "../CartWidget/CartWidget"
-import "./Navbar.css"
 
-export const Navbar = () => {
+import CartWidget  from "../CartWidget/CartWidget";
+import "./NavBar.css"
+
+const NavBar = () => {
     return (
-      <header>
-         <div className="logo"> 🐻 </div>
-        <nav>
-           <div className="link">
-            <ul>
+      <nav>
+         <h2> Ecommerce 🐻 </h2>
+           <div>
+             <ul>
               <li>Link 1</li>
               <li>Link 2</li>
               <li>Link 3</li>
-            </ul>
+             </ul>
            </div>
-        </nav>
-        <div className="cart-widget"><CartWidget/></div>
-      </header>
+         <CartWidget/>
+      </nav>
     )
 }
+
+export default NavBar

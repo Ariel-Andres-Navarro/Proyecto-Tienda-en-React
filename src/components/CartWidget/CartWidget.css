@@ -1,0 +1,29 @@
+.cart-container {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    
+  }
+  
+  .cart-icon {
+    width: 2rem; /* Ajusta el tamaño según sea necesario */
+    height: auto;
+  }
+  
+  .cart-count {
+    position: absolute;
+    margin-left: 20px;
+    top: 50%;
+    left: 5%;
+    transform: translate(50%, -50%);/* Ajusta el número al centro del icono */
+    background-color: red; /* Color de fondo para el número */
+    color: white; /* Color del texto del número */
+    border-radius: 50%; /* Hace que el fondo sea redondo */
+    width: 1.5rem; /* Ajusta el tamaño del círculo */
+    height: 1.5rem; /* Ajusta el tamaño del círculo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem; /* Ajusta el tamaño del texto del número */
+  }
+  
