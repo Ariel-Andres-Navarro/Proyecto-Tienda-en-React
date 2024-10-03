@@ -3,19 +3,29 @@ import { NavLink } from 'react-router-dom';
 import "./NavBar.css"
 
  const NavBar = () => {
+
     return (
-      
-         
         <nav className="NavBar">
-          <NavLink to='/'>
-             <h3> 🐻 </h3>
+          <NavLink to='/' aria-label="Ir a la página principal"  className="Logo">
+             <h3> Mi Tienda</h3>
           </NavLink>
-           <div className="categories">
-              <NavLink to={`/category/vino`} className={({ isActive}) => isActive ? 'ActiveOption' : 'Option'}>Vinos</NavLink>
-              <NavLink to={`/category/Whisky`} className={({ isActive}) => isActive ? 'ActiveOption' : 'Option'}>Whiskys</NavLink>
-              <NavLink to={`/category/Gin`} className={({ isActive}) => isActive ? 'ActiveOption' : 'Option'}>Gin</NavLink>
+           <div className="categories" >
+              <NavLink
+              to={`/category/vino`} className={({ isActive}) => isActive ? 'ActiveOption' : 'Option'}>
+                Vino
+                </NavLink>
+              <NavLink 
+              to={`/category/whisky`} className={({ isActive}) => isActive ? 'ActiveOption' : 'Option'}>
+                Whisky
+                </NavLink>
+              <NavLink 
+              to={`/category/gin`} className={({ isActive}) => isActive ? 'ActiveOption' : 'Option'}>
+                Gin
+                </NavLink>              
           </div>
-        <CartWidget/>
+          <div className="Cart">
+               <CartWidget aria-label="Ir al carrito"/>
+         </div>
         </nav>
     )
 }

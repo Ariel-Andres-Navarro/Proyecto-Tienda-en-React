@@ -1,49 +1,35 @@
-/* NavBar.css */
-
-/* Ensure the NavBar takes up the full width of the viewport */
 .NavBar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #333;
-  padding: 10px 20px;
-  color: white;
-  width: 100%; /* Makes sure it spans the entire width */
-  box-sizing: border-box; /* Ensures padding and border are included in the total width */
-  position: fixed; /* Optional: Keeps the NavBar fixed at the top */
-  top: 0; /* Ensures it stays at the top */
-  left: 0; /* Ensures it starts at the left edge */
-  z-index: 1000; /* Optional: Keeps it above other content */
+  background-color: #f8f8f8; 
+  padding: 10px 20px; 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
 }
 
-.NavBar h3 {
-  margin: 0;
-  font-size: 24px;
+.Logo {
+  font-size: 24px; 
+  font-weight: bold; 
 }
 
-.NavBar .categories {
-  display: flex;
-  gap: 15px;
+.categories {
+  display: flex; 
+  justify-content: center; 
+  flex-grow: 1; 
 }
 
-.NavBar .categories a {
-  text-decoration: none;
-  color: white;
-  font-size: 18px;
+.categories a {
+  margin: 0 15px; 
+  text-decoration: none; 
+  color: #333; 
+  transition: color 0.3s; 
 }
 
-.NavBar .categories a.Option {
-  opacity: 0.8;
-  transition: opacity 0.3s;
+.categories a:hover {
+  color: #007bff; 
 }
-
-.NavBar .categories a.ActiveOption {
-  font-weight: bold;
-  border-bottom: 2px solid white;
-}
-
-.NavBar .categories a:hover {
-  opacity: 1;
+.Cart {
+  margin-left: auto; 
 }
 
 

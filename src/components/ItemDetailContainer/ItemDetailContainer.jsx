@@ -1,32 +1,53 @@
-import './ItemDetailContainer.css'
-import { useState, useEffect } from 'react'
-import { getProductById } from '../../asyncMock'
-import ItemDetail from '../ItemDetail/ItemDetail'
-import { useParams } from  'react-router-dom'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import './ItemDetailContainer.css';
+import { useState, useEffect } from 'react';
+import ItemDetail from '../ItemDetail/ItemDetail';
+import { useParams } from 'react-router-dom';
+import { getProductById } from '../../services/firebase/db';
 
 const ItemDetailContainer = () => {
-    const [product, setProduct] = useState(null)
-
-    const { itemId } = useParams()
-
+    const [product, setProduct] = useState(null);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
+    const { itemId } = useParams();
+    
     useEffect(() => {
-        getProductById(parseInt(itemId))
-           .then(response => {
-               setProduct(response);
-           })
-           .catch(error => {
-              console.error(error)
-           })
-    }, [itemId])
+        const fetchProduct = async () => {
+            setLoading(true);
+            setError(null);
 
-    return(
+            if (!itemId) {
+                setError("ID de producto no proporcionado");
+                setLoading(false);
+                return;
+            }
+
+            try {
+                const productData = await getProductById(itemId);
+                if (!productData) {
+                    setError("Producto no encontrado");
+                } else {
+                    setProduct(productData);
+                }
+            } catch (error) {
+                console.error("Error al cargar el producto:", error);
+                setError("Error al cargar el producto. Intenta nuevamente.");
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        fetchProduct();
+    }, [itemId]);
+
+    if (loading) return <h2>Cargando...</h2>;
+    if (error) return <h2>{error}</h2>;
+
+    return (
         <div className='ItemDetailContainer'>
-            {product && <ItemDetail {...product}/> }
+            {product && <ItemDetail {...product} />}
         </div>
-    )
-}
+    );
+};
 
-export default ItemDetailContainer
+export default ItemDetailContainer;
 
-// en linea 25 agrege {product &&}
